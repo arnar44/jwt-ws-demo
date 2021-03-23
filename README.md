@@ -23,10 +23,11 @@ GRANT
 
 ### Get Repository
 
-Clone the repo ...
+Clone the repo
 
 ```bash
-....
+$ git clone https://github.com/arnar44/jwt-ws-demo.git
+$ cd .\jwt-ws-demo\
 ```
 
 ### Install Packages
@@ -98,7 +99,7 @@ Lints all js files and gives feedback where there are errors (runs eslint *.js *
 ## Other
 
 ### Running instance
-To extend the demo, the server was setup and is running on heroku. The link to the server is: ...
+To extend the demo, the server was setup and is running on heroku. The link to the server is: https://jwt-ws-demo.herokuapp.com/
 
 ### Testing/Interacting
 To test and interact with the server various tools can be used. In previous assignments I have used postman (https://www.postman.com/). For this demo I used a VSCode extension 'REST Client'. You can then create a .rest file and query the server directly in vsCode. Some examples of the requests I used can be found in requests/requests.rest. With the server running, requests can be sent by clicking "Send Request" above each of the requests in the file. 
