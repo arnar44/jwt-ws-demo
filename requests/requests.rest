@@ -1,0 +1,169 @@
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "username": "eric1212",
+  "name": "Eric Bloom",
+  "password": "12345"
+}
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "user2",
+  "password": "12345"
+}
+
+###
+
+GET http://localhost:3000/users/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjE2NDkyNzk0LCJleHAiOjE2MTc2OTI3OTR9.mu_MitEaS79elFjYgNL5L9zRrO-ouSyMbCyBvuhj10Y
+
+###
+
+GET http://localhost:3000/users/13
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjE2NDkyNzk0LCJleHAiOjE2MTc2OTI3OTR9.mu_MitEaS79elFjYgNL5L9zRrO-ouSyMbCyBvuhj10Y
+
+###
+
+GET http://localhost:3000/users?search=admin
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjE2NDkyNzk0LCJleHAiOjE2MTc2OTI3OTR9.mu_MitEaS79elFjYgNL5L9zRrO-ouSyMbCyBvuhj10Y
+
+###
+
+PATCH http://localhost:3000/users/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjE2NDkyNzk0LCJleHAiOjE2MTc2OTI3OTR9.mu_MitEaS79elFjYgNL5L9zRrO-ouSyMbCyBvuhj10Y
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "username": "userxx",
+  "password": "123456"
+}
+
+###
+
+DELETE http://localhost:3000/users/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsImlhdCI6MTYxNjM2NzQ4NywiZXhwIjoxNjE3NTY3NDg3fQ.WdE6mgq01gADED7_hekgfD8qDNlRVlgooGVlxQjGZVY
+
+###
+GET http://localhost:3000/users/me/articles
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjE2NDkzMDMyLCJleHAiOjE2MTc2OTMwMzJ9.gSdvBoPIx5vl3UIxKz6G6Dx-oI2zlK0Iun62YRxcf9Y
+
+###
+GET http://localhost:3000/users/3/articles
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjE2NDkzMDMyLCJleHAiOjE2MTc2OTMwMzJ9.gSdvBoPIx5vl3UIxKz6G6Dx-oI2zlK0Iun62YRxcf9Y
+
+
+###
+GET http://localhost:3000/users/3/comments
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjE2NDkzMDMyLCJleHAiOjE2MTc2OTMwMzJ9.gSdvBoPIx5vl3UIxKz6G6Dx-oI2zlK0Iun62YRxcf9Y
+
+
+###
+GET http://localhost:3000/users/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjE2NDkzMDMyLCJleHAiOjE2MTc2OTMwMzJ9.gSdvBoPIx5vl3UIxKz6G6Dx-oI2zlK0Iun62YRxcf9Y
+
+###
+GET http://localhost:3000/topics
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjE2NDkzMDMyLCJleHAiOjE2MTc2OTMwMzJ9.gSdvBoPIx5vl3UIxKz6G6Dx-oI2zlK0Iun62YRxcf9Y
+
+### 
+POST http://localhost:3000/topics
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsImlhdCI6MTYxNjA4NDkwNSwiZXhwIjoxNjE3Mjg0OTA1fQ.Q9hk6dZU_esWE7ImxS0IHB3MHM1wFYGxyeYMaPS8oQo
+Content-Type: application/json
+
+{
+  "topic": "Random Topic"
+}
+
+### 
+PATCH http://localhost:3000/topics/8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsImlhdCI6MTYxNjA4NDkwNSwiZXhwIjoxNjE3Mjg0OTA1fQ.Q9hk6dZU_esWE7ImxS0IHB3MHM1wFYGxyeYMaPS8oQo
+Content-Type: application/json
+
+{
+  "topic": "Updated Random"
+}
+
+### 
+DELETE http://localhost:3000/topics/notid
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsImlhdCI6MTYxNjM2Mzg5OCwiZXhwIjoxNjE3NTYzODk4fQ.EomJMmNRnqtDEvx9bgCM148_H65jTMMBhJxUqlqCgR4
+
+
+###
+POST http://localhost:3000/articles
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjE2NDkzMDMyLCJleHAiOjE2MTc2OTMwMzJ9.gSdvBoPIx5vl3UIxKz6G6Dx-oI2zlK0Iun62YRxcf9Y
+Content-Type: application/json
+
+{
+  "topic": "cooking",
+  "title": "xxXXAxwsoxxme zzssartisssclexx",
+  "article": "This is my first awesome article. Hope you enjoy!"
+}
+
+### 
+GET http://localhost:3000/articles
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjE2NDkzMDMyLCJleHAiOjE2MTc2OTMwMzJ9.gSdvBoPIx5vl3UIxKz6G6Dx-oI2zlK0Iun62YRxcf9Y
+
+###
+
+GET http://localhost:3000/articles?search=Lorem
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjE2NDkzMDMyLCJleHAiOjE2MTc2OTMwMzJ9.gSdvBoPIx5vl3UIxKz6G6Dx-oI2zlK0Iun62YRxcf9Y
+
+
+###
+GET http://localhost:3000/articles/5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjE2NDkzMDMyLCJleHAiOjE2MTc2OTMwMzJ9.gSdvBoPIx5vl3UIxKz6G6Dx-oI2zlK0Iun62YRxcf9Y
+
+###
+DELETE http://localhost:3000/articles/3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjE2NDkzMDMyLCJleHAiOjE2MTc2OTMwMzJ9.gSdvBoPIx5vl3UIxKz6G6Dx-oI2zlK0Iun62YRxcf9Y
+
+### 
+PATCH http://localhost:3000/articles/5555555
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjE2NDkzMDMyLCJleHAiOjE2MTc2OTMwMzJ9.gSdvBoPIx5vl3UIxKz6G6Dx-oI2zlK0Iun62YRxcf9Y
+Content-Type: application/json
+
+{
+  "title": "XXXXupdated title11333454XXX",
+  "topic": "sports",
+  "article": "This is new"
+}
+
+###
+POST http://localhost:3000/articles/3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjE2NDkzMDMyLCJleHAiOjE2MTc2OTMwMzJ9.gSdvBoPIx5vl3UIxKz6G6Dx-oI2zlK0Iun62YRxcf9Y
+Content-Type: application/json
+
+{
+  "title": "My first comment",
+  "comment": "This is an great article!!"
+}
+
+###
+PATCH http://localhost:3000/comments/11
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjE2NDkzMDMyLCJleHAiOjE2MTc2OTMwMzJ9.gSdvBoPIx5vl3UIxKz6G6Dx-oI2zlK0Iun62YRxcf9Y
+Content-Type: application/json
+
+{
+  "title": "Mmmmmmmmmmmmmmmmmmmmmmmmm",
+  "comment": "This is an great article!!"
+}
+
+###
+DELETE http://localhost:3000/comments/11
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjE2NDkzMDMyLCJleHAiOjE2MTc2OTMwMzJ9.gSdvBoPIx5vl3UIxKz6G6Dx-oI2zlK0Iun62YRxcf9Y
+
+###
+POST http://localhost:3000/articles/3/dislike
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjE2NDkzMDMyLCJleHAiOjE2MTc2OTMwMzJ9.gSdvBoPIx5vl3UIxKz6G6Dx-oI2zlK0Iun62YRxcf9Y
+###
+POST http://localhost:3000/users/4/declineAdmin
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImlhdCI6MTYxNjQxNTgyMiwiZXhwIjoxNjE3NjE1ODIyfQ.4554hCnFbna4gg7qx4tfJEW_DucHleywZ_VRGyPLL8A
+###
+POST http://localhost:3000/users/me/requestAdmin
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNjE2NDEzMjkwLCJleHAiOjE2MTc2MTMyOTB9.lhC4GmNpgFuE5Y-h9UQrIYUnOOv0PAMNQMrVwsWkkLI
